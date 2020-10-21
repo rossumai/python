@@ -146,7 +146,7 @@ for version in "${versions[@]}"; do
 			slim) template="$variant"; tag="$(basename "$(dirname "$dir")")" ;;
 			windowsservercore-*) template='windowsservercore'; tag="${variant#*-}" ;;
 			alpine*) template='alpine'; tag="${variant#alpine}" ;;
-	  ubuntu) template='ubuntu'; tag="$(basename "$(dirname "$dir")")" ;;
+			ubuntu) template='ubuntu'; tag="$(basename "$(dirname "$dir")")" ;;
 			*) template='debian'; tag="$variant" ;;
 		esac
 		if [ "$variant" = 'slim' ]; then
